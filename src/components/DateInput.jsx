@@ -244,8 +244,10 @@ class DateInput extends React.PureComponent {
           disabled={disabled}
           readOnly={typeof readOnly === 'boolean' ? readOnly : isTouch}
           required={required}
+          role="combobox"
           aria-describedby={`${screenReaderMessage && screenReaderMessageId} ${ariaDescribedBy?ariaDescribedBy:''}`}
           aria-expanded={isFocused}
+          aria-controls={id}
         />
 
         {withFang && (
